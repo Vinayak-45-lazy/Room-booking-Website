@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="/listings">
+      <i class="fa-solid fa-landmark-dome"></i>
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+      <div class="navbar-nav">
+        <!-- <a class="nav-link active" href="/">Home</a> -->
+        <a class="nav-link" href="/listings">Explore</a>
+        <a class="nav-link" href="/listings/new">Add New Listing</a>
+      </div>
+
+      <div class="navbar-nav ms-auto">
+
+  <% if (!locals.currentUser) { %>
+    <a class="nav-link" href="/signup"><b>Sign Up</b></a>
+    <a class="nav-link" href="/login"><b>Login</b></a>
+  <% } else { %>
+    <span class="nav-link">Welcome, <%= locals.currentUser.username %>!</span>
+    <a class="nav-link" href="/listings/mine">My Listings</a>
+    <a class="nav-link" href="/logout"><b>Logout</b></a>
+  <% } %>
+
+</div>
+
+
+    </div>
+  </div>
+</nav>

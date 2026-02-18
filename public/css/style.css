@@ -1,0 +1,353 @@
+body{
+font-family: "Plus Jakarta Sans", sans-serif !important;
+}
+
+.navbar{
+    height: 70px;
+    padding: 5px 4px 6px 5px;
+    margin-bottom: 15px;
+    background-color: rgb(239, 248, 250);
+}
+.fa-landmark-dome{
+    color: rgb(171, 62, 38);
+    font-size: 45px;
+    padding-left: 15px;
+}
+.nav-link{
+    color: rgb(0, 0, 0) !important;
+}
+.info-links a{
+    text-decoration: none;
+    margin: 7px;
+    padding: 6px;
+    color: rgb(33, 33, 33);
+}
+
+.info-links a:hover{
+    padding: 8px;
+    color: rgb(63, 121, 237);
+    text-decoration: underline;
+}
+
+.info-links{
+    width: 100%;
+}
+
+.info-social{
+    width: 100%;
+    font-size: 1.3rem;
+}
+.info-social i{
+    margin-right: 1.5rem;
+    margin-left: 1rem;
+}
+.info{
+    text-align: center;
+    display: flex;
+    margin-top: 37px;
+    padding-top: 12px;
+    background-color: rgb(233, 255, 255);
+    height: 8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.card{
+    border: none;
+    margin-bottom: 2.1rem;
+}
+.card-img-top{
+    border-radius: 2rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+.card-body{
+    padding: 0 !important;
+}
+.card-text{
+    font-weight: 400 !important;
+}
+.listing-link{
+    text-decoration: none;
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: rgb(255, 255, 255);
+}
+.form-label{
+    font-weight: 700;
+}
+.card-body{
+    margin-left: 19px;
+    margin-top: 5px;
+    margin-bottom: 7px;
+}
+.show-img{
+    height: 30vh;
+}
+.listing-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.card {
+  border-radius: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.card {
+  border-radius: 12px;
+}
+
+.btn-primary {
+  border-radius: 8px;
+}
+
+.form-control {
+  border-radius: 8px;
+}
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 5px;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  font-size: 35px;
+  color: #ccc;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+  color: gold;
+  transform: scale(1.2);
+}
+
+.rating input:checked ~ label {
+  color: gold;
+}
+.rating input:checked ~ label:hover,
+.rating input:checked ~ label:hover ~ label {
+    color: gold;
+    transform: scale(1.2);
+    }
+    
+
+    /* ===== Review Card Design ===== */
+
+.card.shadow-sm {
+  border-radius: 18px;
+  border: none;
+  padding: 18px 20px;
+  background: #ffffff;
+  transition: all 0.25s ease;
+}
+
+/* Hover effect */
+.card.shadow-sm:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+/* Username */
+.card-title {
+  font-weight: 600;
+  font-size: 17px;
+  color: #2c2c2c;
+}
+
+/* Stars */
+.card-body .mb-2 {
+  font-size: 20px;
+  color: #f4b400;
+  letter-spacing: 2px;
+}
+
+/* Comment text */
+.card-text {
+  font-size: 15px;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* Delete button alignment */
+.text-end {
+  padding-right: 20px;
+}
+
+/* Delete button style */
+.btn-danger.btn-sm {
+  border-radius: 25px;
+  padding: 6px 18px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+/* Delete hover */
+.btn-danger.btn-sm:hover {
+  transform: scale(1.07);
+  box-shadow: 0 4px 12px rgba(220,53,69,0.4);
+}
+.nav-link {
+  position: relative;
+  color: #333;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #c16172; /* Airbnb-style accent */
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #db6278;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.filters {
+      display: flex;
+      flex-wrap: wrap;
+      /* gap: 1rem; */
+      /* margin-bottom: 1rem; */
+      margin-bottom: -18px;
+    }
+    .filter {
+      padding: 0.2rem 1rem;
+      background-color: #f8f9fa;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .filter:hover {
+      background-color: #e2e6ea;
+    }
+    .listing-link {
+      text-decoration: none;
+      color: inherit;
+    }
+    .fa-solid.fa-fire {
+      align-items: center;
+      padding-left: 25px;
+    }
+    
+  .filters {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+
+  .filter-item {
+    text-decoration: none;
+    color: #555;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    min-width: 70px;
+    transition: all 0.25s ease;
+  }
+
+  .filter-item i {
+    font-size: 1.4rem;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .filter-item:hover {
+    color: #ff385c;
+    transform: translateY(-3px);
+  }
+
+  .filter-item:hover i {
+    color: #ff385c;
+  }
+
+  /* optional active state */
+  .filter-item.active {
+    color: #ff385c;
+    border-bottom: 2px solid #ff385c;
+  }
+.filter-item.beach:hover {
+  color: #00a8cc;
+}
+.filter-item.beach:hover i {
+  color: #00a8cc;
+}
+  .search-bar {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .search-form {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 999px;
+    padding: 0.4rem 0.75rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  }
+
+  .search-form i {
+    color: #888;
+    margin: 0 0.5rem;
+  }
+
+  .search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  .search-btn {
+    border: none;
+    background-color: #ff385c;
+    color: #fff;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    transition: background-color 0.25s ease;
+  }
+
+  .search-btn:hover {
+    background-color: #e03150;
+  }
+
+

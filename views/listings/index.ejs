@@ -1,0 +1,86 @@
+<% layout("/layouts/boilerplate") -%>
+
+<div class="container mt-4">
+
+ <!-- Search Bar -->
+<div class="search-bar mb-4">
+  <form action="/listings" method="GET" class="search-form">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input 
+      type="text"
+      name="search"
+      placeholder="Search by location, title, or category"
+      class="search-input"
+    >
+    <button type="submit" class="search-btn">Search</button>
+  </form>
+</div>
+
+  
+  <!-- Filters -->
+<div class="filters mb-4">
+  <a href="/listings?category=trending" class="filter-item">
+    <i class="fa-solid fa-fire"></i>
+    <span>Trending</span>
+  </a>
+
+  <a href="/listings?category=beds" class="filter-item">
+    <i class="fa-solid fa-bed"></i>
+    <span>Rooms</span>
+  </a>
+
+  <a href="/listings?category=farms" class="filter-item">
+    <i class="fa-solid fa-cow"></i>
+    <span>Farms</span>
+  </a>
+
+  <a href="/listings?category=pools" class="filter-item">
+    <i class="fa-solid fa-water-ladder"></i>
+    <span>Pools</span>
+  </a>
+
+  <a href="/listings?category=mountains" class="filter-item">
+    <i class="fa-solid fa-mountain"></i>
+    <span>Mountains</span>
+  </a>
+
+  <a href="/listings?category=beach" class="filter-item">
+  <i class="fa-solid fa-umbrella-beach"></i>
+  <span>Beach</span>
+  </a>
+
+</div>
+
+
+
+  <div class="row g-4 mt-1 ">
+    <% for (let listing of allListings) { %>
+
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <a href="/listings/<%= listing._id %>" class="listing-link">
+
+          <div class="card h-100 shadow-sm">
+            <img 
+              src="<%= listing.image.url %>" 
+              class="card-img-top" 
+              alt="listing image"
+            >
+
+            <div class="card-body">
+              <p class="card-text">
+                <b><%= listing.title %></b><br>
+                ₹
+                <%= typeof listing.price === "number"
+                    ? listing.price.toLocaleString("en-IN")
+                    : "Price not set" %>
+                / Night
+              </p>
+            </div>
+          </div>
+
+        </a>
+      </div>
+
+    <% } %>
+  </div>
+</div>
