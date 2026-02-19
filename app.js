@@ -39,6 +39,8 @@ app.use(express.static(path.join(__dirname, "public")));
 
 
 
+
+
 // ---------- Session & Flash ----------
 const sessionOptions = {
   secret: "mysupersecretcode",
@@ -76,16 +78,14 @@ app.use("/listings", listings);
 app.use("/listings/:id/reviews", reviews);
 app.use("/", userRoutes);
 
-app.use((req, res, next) => {
-  console.log("Requested URL:", req.originalUrl);
-  next();
-});
+
 
 // ---------- 404 Handler ----------
 // 404 Handler
-app.use((req, res, next) => {
-  next(new ExpressError("Page Not Found", 404));
+app.use((req, res) => {
+  res.status(404).send("404 Not Found");
 });
+
 
 
 // ---------- Error Handler ----------
