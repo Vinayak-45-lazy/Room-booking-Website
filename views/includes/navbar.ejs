@@ -27,11 +27,11 @@
 
       <div class="navbar-nav ms-auto">
 
-  <% if (!locals.currentUser) { %>
+  <% if (!currentUser) { %>
     <a class="nav-link" href="/signup"><b>Sign Up</b></a>
     <a class="nav-link" href="/login"><b>Login</b></a>
   <% } else { %>
-    <span class="nav-link">Welcome, <%= locals.currentUser.username %>!</span>
+    <span class="nav-link">Welcome, <%= currentUser.username %>!</span>
     <a class="nav-link" href="/listings/mine">My Listings</a>
     <a class="nav-link" href="/logout"><b>Logout</b></a>
   <% } %>

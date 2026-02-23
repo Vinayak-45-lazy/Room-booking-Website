@@ -20,27 +20,23 @@ module.exports.showListing = async (req, res) => {
   }
   res.render("listings/show", { listing })};
 
-  module.exports.createListing = async (req, res) => {
+ module.exports.createListing = async (req, res) => {
   const listing = new Listing(req.body.listing);
 
-  if (req.file) {
+  listing.owner = req.user._id;
+
+  if (req.file) {                          // ✅ only set image once, safely
     listing.image = {
       url: req.file.path,
       filename: req.file.filename
     };
   }
 
-  listing.owner = req.user._id;
-  listing.image = {
-    url: req.file.path,
-    filename: req.file.filename
-  };
   await listing.save();
 
   req.flash("success", "New listing created!");
   res.redirect(`/listings/${listing._id}`);
 };
-
 
   module.exports.renderEditForm = async (req, res) => {
     let { id } = req.params;
