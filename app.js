@@ -12,7 +12,6 @@ const session = require("express-session");
 const flash = require("connect-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
-
 const ExpressError = require("./utils/ExpressError");
 const User = require("./models/user.js");
 const listings = require("./routes/listing.js");
@@ -74,8 +73,6 @@ app.get("/", (req, res) => {
 app.use("/listings", listings);
 app.use("/listings/:id/reviews", reviews);
 app.use("/", userRoutes);
-
-
 
 // ---------- 404 Handler ----------
 // 404 Handler
