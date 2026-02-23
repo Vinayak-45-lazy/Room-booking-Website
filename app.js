@@ -26,7 +26,6 @@ mongoose.connect(MONGO_URL)
   .then(() => console.log("Connected to Database"))
   .catch(err => console.log("Database connection error:", err));
 
-
 // ---------- App Setup ----------
 const app = express();
 app.engine("ejs", ejsMate);
@@ -36,8 +35,6 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "public")));
-
-
 
 
 
