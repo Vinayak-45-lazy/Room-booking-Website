@@ -80,8 +80,6 @@ app.use((req, res) => {
   res.status(404).send("404 Not Found");
 });
 
-
-
 // ---------- Error Handler ----------
 app.use((err, req, res, next) => {
   console.log("ERROR 👉", err);
