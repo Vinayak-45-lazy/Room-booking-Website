@@ -67,7 +67,7 @@ app.use((req, res, next) => {
 
 // ---------- Routes ----------
 app.get("/", (req, res) => {
-  res.send("Hi, I am root");
+  res.redirect("/listings");
 });
 
 app.use("/listings", listings);
